@@ -1,158 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-  <title>Scikit-learn</title>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=Montserrat"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-  <link href="styles.css" rel="stylesheet" />
-  <body>
-    <!-- Navbar -->
-    <div class="w3-top">
-      <div class="w3-bar w3-red w3-card w3-left-align w3-large">
-        <a
-          class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
-          href="javascript:void(0);"
-          onclick="myFunction()"
-          title="Toggle Navigation Menu"
-          ><i class="fa fa-bars"></i
-        ></a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-white"
-          >Home</a
-        >
-        <a
-          href="#"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Link 1</a
-        >
-        <a
-          href="#"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Link 2</a
-        >
-        <a
-          href="#"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Link 3</a
-        >
-        <a
-          href="#"
-          class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white"
-          >Link 4</a
-        >
+<title>Scikit-learn</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link href="styles.css" rel="stylesheet" />
+
+
+<body>
+
+
+  <!-- Header -->
+  <header class="w3-container w3-red w3-center" style="padding: 128px 16px;">
+    <h1 class="w3-margin w3-jumbo">Scikit-Learn 4Noobs</h1>
+    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
+      Get Started
+    </button>
+  </header>
+
+  <!-- First Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Instalação</h1>
+        <h3 class="w3-padding-32">
+          O Scikit-learn é uma biblioteca do Python para Análise e predição de dados, você pode instalar o Python
+          clicando <a target="_blank" href='https://www.python.org/downloads/'>aqui</a>.
+        </h3>
+        <h4>Digite em seu terminal</h4>
+        <code class='code'>$  pip install -U scikit-learn</code>
+        <h4>Prontinho :)</h4>
+        <h4>Recomendo utilizar outros pacotes como:</h4>
+        <ul>
+          <li>numpy</li>
+          <code class='code'>$  pip install -U numpy</code>
+          <li>pandas</li>
+          <code class='code'>$  pip install -U pandas</code>
+          <li>matplotlib</li>
+          <code class='code'>$  pip install -U matplotlib</code>
+        </ul>
       </div>
 
-      <!-- Navbar on small screens -->
-      <div
-        id="navDemo"
-        class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large"
-      >
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+      <div class="w3-third w3-center">
       </div>
     </div>
+  </div>
 
-    <!-- Header -->
-    <header class="w3-container w3-red w3-center" style="padding: 128px 16px;">
-      <h1 class="w3-margin w3-jumbo">Scikit-Learn 4Noobs</h1>
-      <button
-        class="w3-button w3-black w3-padding-large w3-large w3-margin-top"
-      >
-        Get Started
-      </button>
-    </header>
+  <!-- Second Grid -->
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+      </div>
 
-    <!-- First Grid -->
-    <div class="w3-row-padding w3-padding-64 w3-container">
-      <div class="w3-content">
-        <div class="w3-twothird">
-          <h1>Instalação</h1>
-          <h5 class="w3-padding-32">
-            O Scikit-learn é uma biblioteca do Python para Análise e predição de dados, você pode instalar o Python clicando <a target="_blank" href='https://www.python.org/downloads/'>aqui</a>.
-          </h5>
-          <h5>Digite em seu terminal</h5>
-          <code>pip install -U scikit-learn</code>
-        </div>
+      <div class="w3-twothird">
+        <h1>Conceitos</h1>
+        <h3 class="w3-padding-32">
+          Antes de botarmos a mão na massa precisamos aprender alguns conceitos básicos como:
+        </h3>
 
-        <div class="w3-third w3-center">
-          <i class="fa fa-anchor w3-padding-64 w3-text-red"></i>
-        </div>
+        <h4>Supervisionado X Não supervisionado</h4>
+        <p class="w3-text-grey">
+          machine learning, não é nada mais do que: enviar dados para a maquina, e falar para ela fazer algo com aqueles
+          dados, diante disso, temos duas opções
+        <ul>
+          <li>Falar pra maquina quais são nossos dados que caracterizam a nossa predição e qual dado(s) nós, de fato
+            queremos prever</li>
+          <li>Dar todos os dados pra maquina e falar pra ela separar de acordo com os proprios dados (algo como separar
+            numeros maiores que 5 e menores que 5)</li>
+        </ul>
+        </p>
+        <h4>Classificação X Regressão</h4>
+        <p class='w3-text-grey'>De forma BEM rápida e sucinta
+        <ul>
+          <li>Classificação: Problemas que exigem respostas binárias (comprar ou não comprar uma casa)</li>
+          <li>Regressão: Problemas que exigem respostas com valores (qual é o preço de uma casa, sendo que ela tem 3
+            quartos?)</li>
+        </ul>
+        </p>
       </div>
     </div>
+  </div>
+  <!-- Third Grid -->
+  <div class="w3-row-padding w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>Mão na Massa!</h1>
+        <h2>Modelos Lineares</h2>
+        <p>São, geralmente regressões (ax + b), na qual o valor procurado é linear aos outros valores</p>
+        <!--aa-->
+        <div tabindex="-1" id="notebook" class="border-box-sizing">
+          <div class="container" id="notebook-container">
 
-    <!-- Second Grid -->
-    <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-      <div class="w3-content">
-        <div class="w3-third w3-center">
-          <i class="fa fa-coffee w3-padding-64 w3-text-red w3-margin-right"></i>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[1]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="c1"># Minimo Quadrados ordinários</span>
+      <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1">#plot de gráficos</span>
+      <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># matematicas</span>
+      <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span> <span class="c1">#datasets de exemplo</span>
+      <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span> <span class="c1">#modelos lineares</span>
+      <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span><span class="p">,</span> <span class="n">r2_score</span> <span class="c1">#metricas de acertividade do modelo</span>
+      
+      <span class="c1">#Atribuo a duas variaveis o dataset</span>
+      <span class="n">diabetes_X</span><span class="p">,</span> <span class="n">diabetes_y</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_diabetes</span><span class="p">(</span><span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+      
+      <span class="c1"># iremos usar apenas uma caracteristica (apenas um X)</span>
+      <span class="n">diabetes_X</span> <span class="o">=</span> <span class="n">diabetes_X</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+      
+      <span class="c1"># Divide as caracteristicas entre treino e teste</span>
+      <span class="n">diabetes_X_train</span> <span class="o">=</span> <span class="n">diabetes_X</span><span class="p">[:</span><span class="o">-</span><span class="mi">20</span><span class="p">]</span>
+      <span class="n">diabetes_X_test</span> <span class="o">=</span> <span class="n">diabetes_X</span><span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">:]</span>
+      
+      <span class="c1"># Split os resultados em treino e teste</span>
+      <span class="n">diabetes_y_train</span> <span class="o">=</span> <span class="n">diabetes_y</span><span class="p">[:</span><span class="o">-</span><span class="mi">20</span><span class="p">]</span>
+      <span class="n">diabetes_y_test</span> <span class="o">=</span> <span class="n">diabetes_y</span><span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">:]</span>
+      
+      <span class="c1">#instancio a regressão</span>
+      <span class="n">regr</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+      
+      <span class="c1">#Treino o modelo usando os sets de treino</span>
+      <span class="n">regr</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">diabetes_X_train</span><span class="p">,</span> <span class="n">diabetes_y_train</span><span class="p">)</span>
+      
+      <span class="c1">#Faço predições utilizando os dados de teste</span>
+      <span class="n">diabetes_y_pred</span> <span class="o">=</span> <span class="n">regr</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">diabetes_X_test</span><span class="p">)</span>
+      
+      <span class="c1">#Coeficientes</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Coefficients: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">regr</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+      <span class="c1">#erro médio quadrado</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Mean squared error: </span><span class="si">%.2f</span><span class="s1">&#39;</span>
+            <span class="o">%</span> <span class="n">mean_squared_error</span><span class="p">(</span><span class="n">diabetes_y_test</span><span class="p">,</span> <span class="n">diabetes_y_pred</span><span class="p">))</span>
+      <span class="c1"># Coeficiente de determinação, 1 == predição perfeita</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Coefficient of determination: </span><span class="si">%.2f</span><span class="s1">&#39;</span>
+            <span class="o">%</span> <span class="n">r2_score</span><span class="p">(</span><span class="n">diabetes_y_test</span><span class="p">,</span> <span class="n">diabetes_y_pred</span><span class="p">))</span>
+      
+      <span class="c1">#o que é erro medio quadrado</span>
+      <span class="n">acc</span> <span class="o">=</span> <span class="p">[]</span>
+      <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">diabetes_y_pred</span><span class="p">)):</span>
+          <span class="n">variance</span> <span class="o">=</span> <span class="p">(</span><span class="n">diabetes_y_pred</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">diabetes_y_test</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span>
+          <span class="c1">#variancia = predição - valor real ^2</span>
+          <span class="c1">#por que elevar ao quadrado? --&gt; pros valores não ficarem negativos</span>
+          <span class="n">acc</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">variance</span><span class="p">)</span>      
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;erro medio quadrado&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">acc</span><span class="p">),</span><span class="mi">2</span><span class="p">))</span> <span class="c1">#erro médio quadrado</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="output_wrapper">
+                <div class="output">
+
+
+                  <div class="output_area">
+
+                    <div class="prompt"></div>
+
+
+                    <div class="output_subarea output_stream output_stdout output_text">
+                      <pre>Coefficients: 
+       [938.23786125]
+      Mean squared error: 2548.07
+      Coefficient of determination: 0.47
+      erro medio quadrado 2548.07
+      </pre>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[2]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="c1"># Gráfico</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">diabetes_X_test</span><span class="p">,</span> <span class="n">diabetes_y_test</span><span class="p">,</span>  <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">diabetes_X_test</span><span class="p">,</span> <span class="n">diabetes_y_pred</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+      
+      <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(())</span>
+      <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(())</span>
+      
+      <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="output_wrapper">
+                <div class="output">
+
+
+                  <div class="output_area">
+
+                    <div class="prompt"></div>
+
+
+
+
+                    <div class="output_png output_subarea ">
+                      <img src="data:image/png;base64,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
+      ">
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span> 
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
+        <!--aa-->
 
-        <div class="w3-twothird">
-          <h1>Lorem Ipsum</h1>
-          <h5 class="w3-padding-32">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </h5>
+      </div>
 
-          <p class="w3-text-grey">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat
-            non proident, sunt in culpa qui officia deserunt mollit anim id est
-            laborum consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.
-          </p>
-        </div>
+      <div class="w3-third w3-center">
       </div>
     </div>
+  </div>
 
-    <div class="w3-container w3-black w3-center w3-opacity w3-padding-64">
-      <h1 class="w3-margin w3-xlarge">Quote of the day: live life</h1>
-    </div>
-
-    <!-- Footer -->
-    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-      <div class="w3-xlarge w3-padding-32">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <div class="cell border-box-sizing code_cell rendered">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
       </div>
-      <p>
-        Powered by
-        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
-          >w3.css</a
-        >
-      </p>
-    </footer>
 
-    <script>
-      // Used to toggle the menu on small screens when clicking on the menu button
-      function myFunction() {
-        var x = document.getElementById("navDemo");
-        if (x.className.indexOf("w3-show") == -1) {
-          x.className += " w3-show";
-        } else {
-          x.className = x.className.replace(" w3-show", "");
+      <div class="w3-twothird">
+        <h2>Árvores de Decisão</h2>
+        <p>As Árvores de Decisão são um dos modelos mais práticos e mais usados em inferência indutiva. Este método
+          representa funções como árvores de decisão. Estas árvores são treinadas de acordo com um conjunto de treino
+          (exemplos previamente classificados) e posteriormente, outros exemplos são classificados de acordo com essa
+          mesma árvore.</p>
+        <h1></h1>
+        <img
+          src="https://web.tecnico.ulisboa.pt/ana.freitas/bioinformatics.ath.cx/bioinformatics.ath.cx/uploads/RTEmagicC_arv_dec4_01.gif.gif"
+          alt="img">
+        <div tabindex="-1" id="notebook" class="border-box-sizing">
+          <div class="container" id="notebook-container">
+
+            <div class="cell border-box-sizing code_cell rendered">
+              <div class="input">
+                <div class="prompt input_prompt">In&nbsp;[2]:</div>
+                <div class="inner_cell">
+                  <div class="input_area">
+                    <div class=" highlight hl-ipython3">
+                      <pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># plots</span>
+      <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># datasets</span>
+      <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span> <span class="c1"># modelo</span>
+      <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">plot_tree</span> <span class="c1"># plots</span>
+      <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="c1">#divisão</span>
+      <span class="c1">#dataframe de exemplo</span>
+      <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv&#39;</span><span class="p">)</span>
+      
+      <span class="c1">#Separei os dados</span>
+      <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;species&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+      <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;species&#39;</span><span class="p">]</span>
+      
+      <span class="c1">#dividi os dados em treino e test</span>
+      <span class="n">X_test</span><span class="p">,</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_train</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> 
+      
+      
+      <span class="n">clf</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span> <span class="c1">#criei o classificador</span>
+      <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span> <span class="c1">#treino</span>
+      <span class="n">predict</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span> <span class="c1">#test</span>
+      
+      <span class="n">aux</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="k">for</span> <span class="n">i</span><span class="p">,</span><span class="n">j</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">y_test</span><span class="p">):</span>
+          <span class="k">if</span> <span class="n">j</span> <span class="o">==</span> <span class="n">predict</span><span class="p">[</span><span class="n">i</span><span class="p">]:</span>
+             <span class="n">aux</span> <span class="o">=</span> <span class="n">aux</span> <span class="o">+</span> <span class="mi">1</span>
+      <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;accuracy: &#39;</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">aux</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span><span class="s1">&#39;%&#39;</span><span class="p">)</span>
+      </pre>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="output_wrapper">
+                <div class="output">
+
+
+                  <div class="output_area">
+
+                    <div class="prompt"></div>
+
+
+                    <div class="output_subarea output_stream output_stdout output_text">
+                      <pre>accuracy:  93.75 %
+      </pre>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <img src="https://pythonmachinelearning.pro/wp-content/uploads/2017/11/Decision-Tree-Iris-Dataset.png.webp" alt="tree">
+  
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+    <div class="w3-xlarge w3-padding-32">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>
+      Powered by
+      <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+    </p>
+  </footer>
+
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+  </script>
+  <script>
+    MathJax.Hub.Config({
+      "HTML-CSS": {
+        /*preferredFont: "TeX",*/
+        /*availableFonts: ["TeX", "STIX"],*/
+        styles: {
+          scale: 100,
+          ".MathJax_Display": {
+            "font-size": "100%",
+          }
         }
       }
-    </script>
-  </body>
+    });
+  </script>
+</body>
+
+
 </html>
