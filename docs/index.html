@@ -16,9 +16,7 @@
   <!-- Header -->
   <header class="w3-container w3-red w3-center" style="padding: 128px 16px;">
     <h1 class="w3-margin w3-jumbo">Scikit-Learn 4Noobs</h1>
-    <button class="w3-button w3-black w3-padding-large w3-large w3-margin-top">
-      Get Started
-    </button>
+    <h2>Aprendendo a usar uma ferramenta de Machine Learning<br/> na prática e sem enrolação</h2>
   </header>
 
   <!-- First Grid -->
@@ -277,6 +275,7 @@
       <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span> <span class="c1">#divisão</span>
       <span class="c1">#dataframe de exemplo</span>
       <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/639388c2cbc2120a14dcf466e85730eb8be498bb/iris.csv&#39;</span><span class="p">)</span>
+      <span class="c1">#read_csv é a função que lê arquivos CSV em um DataFrame</span>
       
       <span class="c1">#Separei os dados</span>
       <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;species&#39;</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
@@ -324,25 +323,38 @@
         </div>
       </div>
   <img src="https://pythonmachinelearning.pro/wp-content/uploads/2017/11/Decision-Tree-Iris-Dataset.png.webp" alt="tree">
-  
+  <h3>Entendendo esta arvóre</h3>
+  <p>Começando pelo nódulo que está no topo, se o 
+    tamanho da petála é menor ou igual a 2.6,<br/> ela é 
+    classificada como iris setosa. se essa condição não for satisfeita,
+  o algoritimo tenta uma<br/> outra condição: se a largura da pétala é menor
+  ou igual a 1.65, o algoritimo classifica como iris virginica
+  </p> 
+  <br/>
+    </div>
+  </div>
+  <div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+    <div class="w3-content">
+      <div class="w3-third w3-center">
+      </div>
+
+      <div class="w3-twothird">
+        <h1>Mais alguns conceitos</h1>
+        <h3 class="w3-padding-32">
+          Suporte e Confiança
+        </h3>
+        <h4>Suporte</h4>
+        <li>
+          A frequência que um determinado dado, apareceu naquele conjunto de dados</li>
+        <h4>Confiança</h4>
+        <li> Dado um dado X, qual a probabilidade de que o dado Y apareça</li>
+        <h2>Exemplo no Iris Dataset</h2>
+        <img src="https://i.imgur.com/CRLxE2z.png" alt="img">
+        
+      </div>
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-64 w3-center w3-opacity">
-    <div class="w3-xlarge w3-padding-32">
-      <i class="fa fa-facebook-official w3-hover-opacity"></i>
-      <i class="fa fa-instagram w3-hover-opacity"></i>
-      <i class="fa fa-snapchat w3-hover-opacity"></i>
-      <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-      <i class="fa fa-twitter w3-hover-opacity"></i>
-      <i class="fa fa-linkedin w3-hover-opacity"></i>
-    </div>
-    <p>
-      Powered by
-      <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-    </p>
-  </footer>
 
   <script>
     // Used to toggle the menu on small screens when clicking on the menu button
